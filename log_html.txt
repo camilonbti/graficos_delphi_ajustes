@@ -1,0 +1,145 @@
+13/04/2025 20:05:20 - TFrameGraficoBase.Create - Início
+13/04/2025 20:05:20 - TFrameGraficoBase.Loaded - Início
+13/04/2025 20:05:20 - TFrameGraficoBase.ConfigurarBrowser - Início
+13/04/2025 20:05:20 - ConfigurarIEVersion - AppName: CLIENTE.exe
+13/04/2025 20:05:20 - ConfigurarIEVersion - Registro configurado com sucesso
+13/04/2025 20:05:20 - TFrameGraficoBase.ConfigurarBrowser - WebBrowser configurado
+13/04/2025 20:05:20 - TFrameGraficoBase.Loaded - WebBrowser inicializado
+13/04/2025 20:05:21 - DoBeforeNavigate - URL: about:blank
+13/04/2025 20:05:28 - lblCaptionVendasClick - Início
+13/04/2025 20:05:28 - lblCaptionVendasClick - QryLoja.Active: True
+13/04/2025 20:05:28 - lblCaptionVendasClick - QryLoja tem 1 registros
+13/04/2025 20:05:28 - lblCaptionVendasClick - FrameGraficoBarras1 visível: True
+13/04/2025 20:05:28 - lblCaptionVendasClick - Dimensões do frame: 536x331
+13/04/2025 20:05:28 - lblCaptionVendasClick - Chamando CarregarDados...
+13/04/2025 20:05:28 - CarregarDados - Início
+13/04/2025 20:05:28 - CarregarDados - Dataset: 1 registros
+13/04/2025 20:05:28 - GerarHTMLBase - Início - Dataset Assigned: True
+13/04/2025 20:05:28 - GerarHTMLBase - Dataset possui 1 registros
+13/04/2025 20:05:28 - GerarHTML - Início da geração do HTML
+13/04/2025 20:05:28 - GerarHTML - Dataset possui 1 registros
+13/04/2025 20:05:28 - GerarHTML - Template base obtido, tamanho: 2032
+13/04/2025 20:05:28 - GerarHTML - Gerando dados JSON...
+13/04/2025 20:05:28 - GerarDadosJSON - Início
+13/04/2025 20:05:28 - GerarDadosJSON - Dataset possui 1 registros
+13/04/2025 20:05:28 - GerarDadosJSON - Verificando campos
+13/04/2025 20:05:28 - GerarDadosJSON - Campo Rótulo: LOJA
+13/04/2025 20:05:28 - GerarDadosJSON - Campo Valor: TOTAL_VENDAS
+13/04/2025 20:05:28 - GerarDadosJSON - Campo ID: 
+13/04/2025 20:05:28 - GerarDadosJSON - Campo rótulo "LOJA" encontrado
+13/04/2025 20:05:28 - GerarDadosJSON - Campo valor "TOTAL_VENDAS" encontrado
+13/04/2025 20:05:28 - GerarDadosJSON - Iniciando loop de extração de dados
+13/04/2025 20:05:28 - GerarDadosJSON - Registro 1:
+13/04/2025 20:05:28 -   - Rótulo: 2 - TREINAMENTO
+13/04/2025 20:05:28 -   - Valor: 34157,1
+13/04/2025 20:05:28 - GerarDadosJSON - Dados extraídos. Total de registros processados: 1
+13/04/2025 20:05:28 - GerarDadosJSON - Total de rótulos: 1
+13/04/2025 20:05:28 - GerarDadosJSON - Total de valores: 1
+13/04/2025 20:05:28 - GerarDadosJSON - Total de IDs: 1
+13/04/2025 20:05:28 - GerarDadosJSON - JSON gerado com sucesso
+13/04/2025 20:05:28 - GerarDadosJSON - Tamanho do JSON: 142 caracteres
+13/04/2025 20:05:28 - GerarDadosJSON - Primeiros 200 caracteres: { labels: ["2 - TREINAMENTO"], datasets: [{ data: [34157.1], idValues: [""], backgroundColor: ["rgba(255, 99, 132, 0.6)"], borderWidth: 1 }] }
+13/04/2025 20:05:28 - GerarHTML - Dados JSON gerados, tamanho: 142
+13/04/2025 20:05:28 - GerarHTML - Gerando configuração JSON...
+13/04/2025 20:05:28 - GerarHTML - Configuração JSON gerada, tamanho: 675
+13/04/2025 20:05:28 - GerarHTML - Substituindo variáveis no template...
+13/04/2025 20:05:28 - GerarHTML - Template completo pronto com 3339 caracteres
+13/04/2025 20:05:28 - GerarHTMLBase - HTML gerado com sucesso - Tamanho: 3339
+13/04/2025 20:05:28 - GerarHTMLBase - Primeiros 200 caracteres: <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"
+13/04/2025 20:05:28 - CarregarDados - HTML gerado, tamanho: 3339
+13/04/2025 20:05:28 - CarregarDados - HTML completo:
+13/04/2025 20:05:28 - --- INÍCIO HTML ---
+13/04/2025 20:05:29 - <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chart.js</title>
+  <style>
+    body { margin: 0; padding: 0; }
+    .chart-container { width: 100%; height: 100%; position: relative; }
+  </style>
+<script>
+  function loadChartJS() {
+    return new Promise((resolve, reject) => {
+      const script = document.createElement("script");
+      script.src = "https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js";
+      script.onload = () => {
+        console.log("Chart.js carregado com sucesso");
+        window.chartJSLoaded = true;
+        resolve();
+      };
+      script.onerror = () => {
+        console.error("Erro ao carregar Chart.js");
+        reject(new Error("Erro ao carregar Chart.js"));
+      };
+      document.head.appendChild(script);
+    });
+  }
+</script>
+
+</head>
+<body>
+  <div class="chart-container">
+    <canvas id="grafico200520411"></canvas>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", async function() {
+  try {
+    await loadChartJS();
+    
+    if (typeof Chart === "undefined") {
+      throw new Error("Chart.js não está disponível mesmo após carregamento");
+    }
+    
+    var ctx = document.getElementById("grafico200520411").getContext("2d");
+    if (!ctx) {
+      throw new Error("Canvas não encontrado");
+    }
+    
+    window.myChart = new Chart(ctx, {
+      type: "bar",
+      data: { labels: ["2 - TREINAMENTO"], datasets: [{ data: [34157.1], idValues: [""], backgroundColor: ["rgba(255, 99, 132, 0.6)"], borderWidth: 1 }] },
+      options: {  responsive: true,  maintainAspectRatio: false,  title: {    display: true,    text: 'Vendas por Loja'  },  scales: {    y: {      beginAtZero: true    },    x: {      ticks: {        maxRotation: 45,        minRotation: 45      }    }  },  plugins: {    legend: {      display: false    },    tooltip: {      callbacks: {        label: function(context) {          let label = context.dataset.label || "";          if (label) {            label += ": ";          }          label += new Intl.NumberFormat("pt-BR", {             style: "currency",             currency: "BRL"           }).format(context.raw);          return label;        }      }    }  }, indexAxis: "y"}
+    });
+    
+    document.getElementById("grafico200520411").onclick = function(evt) {   var activePoints = myChart.getElementsAtEvent(evt);   if (activePoints.length > 0) {     var clickedElementIndex = activePoints[0]._index;     var label = myChart.data.labels[clickedElementIndex];     var value = myChart.data.datasets[0].data[clickedElementIndex];     var idValue = myChart.data.datasets[0].idValues[clickedElementIndex];     var url = "ActionCallBackJS:Retorno("+JSON.stringify([label, value, "", idValue])+")";     location.assign(url);   } };
+    
+    console.log("Gráfico inicializado com sucesso");
+    location.assign("ActionCallBackJS:GraficoCarregado(ok)");
+  } catch(e) {
+    console.error("Erro ao inicializar gráfico:", e);
+    document.body.innerHTML = "<div style='color:red;padding:20px'>" + e.message + "</div>";
+    location.assign("ActionCallBackJS:Erro(" + e.message + ")");
+  }
+});
+  </script>
+</body>
+</html>
+13/04/2025 20:05:29 - --- FIM HTML ---
+13/04/2025 20:05:29 - CarregarDados - HTML será salvo em: C:\NetBusiness\chart_200529022.html
+13/04/2025 20:05:29 - CarregarDados - HTML salvo com sucesso em: C:\NetBusiness\chart_200529022.html
+13/04/2025 20:05:29 - CarregarDados - HTML carregado via Navigate
+13/04/2025 20:05:29 - lblCaptionVendasClick - CarregarDados finalizado
+13/04/2025 20:05:29 - lblCaptionVendasClick - WebBrowser.ReadyState: 4
+13/04/2025 20:05:29 - lblCaptionVendasClick - WebBrowser.Document não atribuído
+13/04/2025 20:05:29 - DoBeforeNavigate - URL: file:///C:/NetBusiness/chart_200529022.html
+13/04/2025 20:05:29 - DoBeforeNavigate - URL: actioncallbackjs:GraficoCarregado(ok)
+13/04/2025 20:05:29 - DoBeforeNavigate - Detectado callback URL
+13/04/2025 20:05:29 - ProcessarCallback - Início
+13/04/2025 20:05:29 - ProcessarCallback - Número de parâmetros: 1
+13/04/2025 20:05:29 - ProcessarCallback - Param[0]: ok
+13/04/2025 20:05:29 - ProcessarCallback - Chamando handler de callback
+13/04/2025 20:05:30 - CarregarDados - Thread de verificação iniciada após 1000ms
+13/04/2025 20:05:30 - CarregarDados - Script de verificação: if (typeof window.myChart !== "undefined") { location.assign("ActionCallBackJS:GraficoCarregado(ok)"); } else { location.assign("ActionCallBackJS:GraficoCarregado(falha)"); }
+13/04/2025 20:05:30 - ExecutarScript - Início
+13/04/2025 20:05:30 - ExecutarScript - Script: if (typeof window.myChart !== "undefined") { location.assign("ActionCallBackJS:GraficoCarregado(ok)"...
+13/04/2025 20:05:30 - VerificarBrowser - WebBrowser NÃO está pronto
+13/04/2025 20:05:30 - ExecutarScript - WebBrowser não está pronto
+13/04/2025 20:05:35 - TFrameGraficoBase.Destroy - Início
